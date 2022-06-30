@@ -144,7 +144,6 @@ header {
 }
 
 .contacts-icon {
-  display: inline;
   fill: currentColor;
   margin-right: 10px;
 }
@@ -242,16 +241,19 @@ header {
 }
 
 .particulars-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
+  border-radius: 4px;
   background-color: var(--icon-background-color);
 }
 
 .particulars-icon {
   width: 70px;
   height: 70px;
-  margin: 25px 100px;
 }
 
 .particulars .item + .item {
@@ -326,7 +328,7 @@ header {
 }
 
 .team-div {
-  padding: 30px 0 0 0;
+  padding: 30px 0px;
 }
 
 .team-member {
@@ -345,7 +347,8 @@ header {
 
 .social {
   display: flex;
-  padding: 16px 32px 30px 32px;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 .social-item:not(:last-child) {
@@ -360,7 +363,6 @@ header {
   border-radius: 50%;
   align-items: center;
   color: var(--icon-social);
-  background-color: var(--another-accent-color);
 }
 
 .social-link:hover,
@@ -384,7 +386,6 @@ header {
 
 .clients-list {
   display: flex;
-  justify-content: center;
 }
 
 .clients-list-item:not(:last-child) {
@@ -452,26 +453,30 @@ header {
   flex-wrap: wrap;
 }
 
-.portfolio-list .item {
-  width: calc((100% - 60px) / 3);
+.portfolio-list .portfolio-link {
+  display: block;
 }
 
-.portfolio-list .item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.portfolio-list .portfolio-link:hover,
+.portfolio-list .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list .item:nth-child(3n) {
+.portfolio-list .portfolio-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.portfolio-list .portfolio-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-list .portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.portfolio-list .item:nth-last-child(-n + 3) {
+.portfolio-list .portfolio-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
@@ -506,8 +511,9 @@ footer {
   padding-bottom: 60px;
 }
 
-.footer {
+.footer.container {
   display: flex;
+  align-items: baseline;
 }
 
 .logo.link {
@@ -552,7 +558,7 @@ footer {
 }
 
 .footer-social-div {
-  margin: 12px auto 40px 70px;
+  margin-left: 70px;
 }
 
 .footer-join {
